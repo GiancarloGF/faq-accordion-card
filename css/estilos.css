@@ -1,0 +1,128 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  background: -webkit-gradient(linear, left top, right bottom, from(#af67e9), to(#6565e7));
+  background: linear-gradient(to bottom right, #af67e9, #6565e7);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.container .containerCard {
+  width: 70%;
+  height: 70%;
+  background-color: #fff;
+  margin: auto;
+  -ms-flex-item-align: center;
+      align-self: center;
+  border-radius: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+.container .containerCard::after {
+  content: '';
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background: url("../images/illustration-box-desktop.svg");
+  background-position: center;
+  background-size: contain;
+  left: -110px;
+  top: 150px;
+  z-index: 99;
+}
+
+.container .containerCard .containerCard_img {
+  width: 50%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.container .containerCard .containerCard_img .illustration {
+  position: absolute;
+  left: -85px;
+  bottom: 60px;
+  width: 110%;
+  z-index: 2;
+}
+
+.container .containerCard .containerCard_img::after {
+  content: ' ';
+  position: absolute;
+  top: -100px;
+  bottom: 0;
+  left: -600px;
+  right: 100px;
+  background: url("../images/bg-pattern-desktop.svg");
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.containerCard_faq {
+  width: 50%;
+  height: 100%;
+  padding: 20px;
+}
+
+.faqs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-right: 0px;
+  font-size: 14px;
+  margin: 30px 0 30px 0;
+  cursor: pointer;
+}
+
+.faqs i {
+  color: #f47c57;
+}
+
+.faqs:hover {
+  color: #f47c57;
+}
+
+.faqs-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.faqs-active-bottom {
+  display: none;
+  font-size: 12px;
+  color: #787887;
+  margin-top: 10px;
+}
+
+.active {
+  display: block;
+}
+/*# sourceMappingURL=estilos.css.map */

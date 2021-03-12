@@ -1,0 +1,110 @@
+$c-vdarkdesatBlue: rgb(29, 30, 53)
+$c-softRed: rgb(244, 124, 87)
+$c-vdgradishBlue: rgb(74, 75, 94)
+$c-dgBlue: rgb(120, 120, 135)
+$c-lgBlue: rgb(231, 231, 233)
+$bg-grandient-softViolet: rgb(175, 103, 233)
+$bg-gradiente-softBlue: rgb(101, 101, 231)
+$t-ff: 'Poppins', sans-serif
+$t-fs: 12px
+$t-fw4: 400
+$t-fw7: 700
+
+//Codigo
+*
+    box-sizing: border-box
+    margin: 0
+    padding: 0
+
+body
+    font-family: $t-ff
+
+
+.container
+    width: 100vw
+    height: 100vh
+    background: linear-gradient(to bottom right,$bg-grandient-softViolet,$bg-gradiente-softBlue )
+    display: flex
+    // position: relative
+    .containerCard
+        width: 70%
+        height: 70%
+        background-color: #fff
+        margin: auto
+        align-self: center
+        border-radius: 30px
+        display: flex
+        // z-index: 2
+        position: relative
+        &::after
+            content: ''
+            position: absolute
+            width: 200px
+            height: 200px
+            background: url('../images/illustration-box-desktop.svg')
+            background-position: center
+            background-size: contain
+            left: -110px
+            top: 150px
+            z-index: 99
+       
+        .containerCard_img
+            width: 50%
+            height: 100%
+            position: relative
+            overflow: hidden
+            z-index: 1
+            .illustration
+                position: absolute
+                left: -85px
+                bottom: 60px
+                width: 110%
+                z-index: 2
+            &::after
+                content: ' '
+                position: absolute
+                top: -100px
+                bottom: 0
+                left: -600px
+                right: 100px
+                background:  url('../images/bg-pattern-desktop.svg')
+                background-position: left
+                background-repeat: no-repeat
+                background-size: cover
+                // z-index: -1
+
+.containerCard_faq
+    width: 50%
+    height: 100%
+    padding: 20px
+
+
+.faqs
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    padding-right: 0px
+    font-size: 14px
+    margin: 30px 0 30px 0
+    cursor: pointer 
+    
+    // position: relative
+    i
+        color: $c-softRed
+    &:hover
+        color: $c-softRed
+
+.faqs-top
+    display: flex
+    justify-content: space-between
+
+.faqs-active-bottom
+    display: none
+    font-size: 12px
+    color: $c-dgBlue
+    margin-top: 10px
+    
+.active
+    display: block
+
+        
